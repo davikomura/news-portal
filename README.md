@@ -1,5 +1,3 @@
-Claro! Aqui está um exemplo de README.md para o seu projeto de portal de notícias:
-
 ```markdown
 # Portal de Notícias
 
