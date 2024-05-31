@@ -1,6 +1,8 @@
 .header {
   background-color: #000000;
   padding: 10px 20px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
 
   .nav {
     .nav-container {
@@ -9,8 +11,16 @@
       align-items: center;
 
       .logo {
-        font-size: 26px;
-        color: #fffefe;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+      }
+      
+      .logo img {
+        max-width: 100px;
+        height: auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
       .menu {
@@ -34,8 +44,52 @@
       }
 
       .search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+      }
+      
+      .search div {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+      }
+      
+      .search input[type='text'] {
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         font-size: 16px;
-        color: #ffffff;
+        color: #333;
+        background-color: #f1f1f1;
+        outline: none;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .search input[type='text']::placeholder {
+        color: #aaa;
+      }
+      
+      .search input[type='text']:focus {
+        background-color: #fff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+      
+      .search svg {
+        position: absolute;
+        right: 20px;
+        fill: #333;
+        cursor: pointer;
+        transition: fill 0.3s ease;
+      }
+      
+      .search svg:hover {
+        fill: #666;
       }
     }
   }
