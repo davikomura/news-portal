@@ -4,26 +4,19 @@
       <div class="logo">
         <img src="assets/file2.png" alt="logo"/>
       </div>
-      <div class="menu">
+      <button class="menu-toggle" (click)="toggleMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="menu" [class.open]="isMenuOpen">
         <ul class="menu-list">
-          <li class="menu-item">
-            News
-          </li>
-          <li class="menu-item">
-            Morning News
-          </li>
-          <li class="menu-item">
-            Video
-          </li>
-          <li class="menu-item">
-            Podcasts
-          </li>
-          <li class="menu-item">
-            About
-          </li>
-          <li class="menu-item">
-            Contacts
-          </li>
+          <li class="menu-item">News</li>
+          <li class="menu-item">Morning News</li>
+          <li class="menu-item">Video</li>
+          <li class="menu-item">Podcasts</li>
+          <li class="menu-item">About</li>
+          <li class="menu-item">Contacts</li>
         </ul>
       </div>
       <div class="search">

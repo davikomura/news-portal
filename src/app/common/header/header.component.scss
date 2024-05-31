@@ -9,6 +9,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap; /* Adicionado para permitir quebra de linha em telas menores */
 
       .logo {
         display: flex;
@@ -16,7 +17,7 @@
         justify-content: center;
         margin: 20px;
       }
-      
+
       .logo img {
         max-width: 100px;
         height: auto;
@@ -30,6 +31,7 @@
           padding: 0;
           margin: 0;
           color: #ffffff;
+          flex-wrap: wrap; /* Adicionado para permitir quebra de linha em telas menores */
 
           .menu-item {
             margin-left: 20px;
@@ -38,7 +40,6 @@
             &:hover {
               color: #FFD700;
             }
-
           }
         }
       }
@@ -49,7 +50,7 @@
         align-items: center;
         margin: 20px;
       }
-      
+
       .search div {
         position: relative;
         display: flex;
@@ -57,7 +58,7 @@
         width: 100%;
         max-width: 400px;
       }
-      
+
       .search input[type='text'] {
         width: 100%;
         padding: 10px 20px;
@@ -70,16 +71,16 @@
         outline: none;
         transition: background-color 0.3s ease, box-shadow 0.3s ease;
       }
-      
+
       .search input[type='text']::placeholder {
         color: #aaa;
       }
-      
+
       .search input[type='text']:focus {
         background-color: #fff;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       }
-      
+
       .search svg {
         position: absolute;
         right: 20px;
@@ -87,10 +88,61 @@
         cursor: pointer;
         transition: fill 0.3s ease;
       }
-      
+
       .search svg:hover {
         fill: #666;
       }
     }
   }
 }
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      margin: 0;
+      flex: 1;
+    }
+
+    .search {
+      order: 1;
+      flex: 2;
+      margin: 0 10px;
+    }
+
+    .menu-toggle {
+      display: block;
+      order: 2;
+    }
+
+    .menu {
+      display: none;
+      width: 100%;
+      text-align: center;
+
+      &.open {
+        display: block;
+      }
+    }
+
+    .menu-list {
+      flex-direction: column;
+
+      .menu-item {
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
