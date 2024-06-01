@@ -1,0 +1,80 @@
+// Variables
+$footer-background: #000000;
+$footer-text-color: #fff;
+$footer-link-color: #fff;
+$footer-link-hover-color: #ccc;
+
+// Footer styles
+.footer {
+    background-color: $footer-background;
+    color: $footer-text-color;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+            padding: 0 20px;
+        }
+        
+        .footer-item {
+            h4 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+            
+            p {
+                margin-bottom: 5px;
+            }
+            
+            ul {
+                list-style-type: none;
+                padding: 0;
+                
+                li {
+                    margin-bottom: 5px;
+                    
+                    a {
+                        color: $footer-link-color;
+                        text-decoration: none;
+                        
+                        &:hover {
+                            color: $footer-link-hover-color;
+                        }
+                    }
+                }
+            }
+            
+            .footer-logo {
+                max-width: 150px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .footer-bottom {
+        background-color: darken($footer-background, 10%);
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .container {
+            padding: 0 10px;
+        }
+    }
+}
