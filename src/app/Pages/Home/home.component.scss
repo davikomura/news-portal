@@ -6,10 +6,10 @@ div {
 .portal {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     padding: 10px;
-    width: 70%;
-    margin-left: 40px;
+    width: 40%;
+    // margin-left: 40px;
 }
 
 .portal img {
@@ -27,8 +27,9 @@ div {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    width: 40%;
-    margin-right: 40px;
+    width: 30%;
+    // margin-right: 40px;
+    align-items: center;
 }
 
 .list_news ul {
@@ -55,3 +56,32 @@ div {
     margin: 0;
     color: #555; /* Cor do texto do resumo */
 }
+
+.list_title_news {
+
+    width: 30%;
+    display: flex;
+    align-items: center;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+  
+      li {
+        margin: 10px 0;
+        padding: 0;
+  
+        a {
+          text-decoration: none;
+          color: #333;
+          display: block;
+          font-size: 1.2em;
+          padding: 5px;
+  
+          &:hover {
+            background-color: #f0f0f0;
+          }
+        }
+      }
+    }
+  }

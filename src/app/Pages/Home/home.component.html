@@ -1,4 +1,11 @@
 <div>
+    <div class="list_title_news">
+        <ul>
+            <li *ngFor="let news of newsList">
+            <a href="#">{{ news.title }}</a>
+            </li>
+        </ul>
+    </div>
     <div class="portal">
         <img 
         src="https://static.euronews.com/articles/stories/08/50/02/90/640x360_cmsv2_ea373b32-de96-5430-b703-5df9ad3d577a-8500290.jpg" 
