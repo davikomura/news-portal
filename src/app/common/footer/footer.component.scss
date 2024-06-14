@@ -9,10 +9,8 @@ $footer-link-hover-color: #ccc;
     background-color: $footer-background;
     color: $footer-text-color;
     padding: 20px 0;
-    position: fixed;
-    bottom: 0;
+    position: relative;
     width: 100%;
-    z-index: 1000;
     
     .container {
         display: flex;
@@ -77,4 +75,9 @@ $footer-link-hover-color: #ccc;
             padding: 0 10px;
         }
     }
+}
+
+// Main content adjustment
+.main-content {
+    padding-bottom: 100px; // Adjust based on the footer height
 }
